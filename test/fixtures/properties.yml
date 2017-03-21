@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  category: MyString
+  type: 
+  livingroom: MyString
+  bedroom: MyString
+  kitchen: MyString
+  bathroom: MyString
+  parking: MyString
+
+two:
+  category: MyString
+  type: 
+  livingroom: MyString
+  bedroom: MyString
+  kitchen: MyString
+  bathroom: MyString
+  parking: MyString
