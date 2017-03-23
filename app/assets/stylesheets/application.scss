@@ -48,12 +48,36 @@ border-radius: 20px;
 
 .picture{
   padding: 20px;
-  margin-top: 2px;
-  height: 600px;
+  margin-top: -5px;
+  height: 500px;
   width: 800px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 
 }
+/* unused text area stylings */
+
+.text-area{
+  padding: 10px;
+  margin-top: 3px;
+  height: 200px;
+  width: 750px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+
+}
+
+/* disable text area resize grabber */
+
+textarea {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  resize: none;
+  text-align: left;
+  left:5px;
+}
+
+/* mugshot of profile pic */
 
 .mugshot{
   margin-top: 10px;
@@ -64,6 +88,7 @@ border-radius: 20px;
   border-radius: 20px;
 
 }
+/* profile name stylings */
 
 .nameplace{
  margin-top:50px;
@@ -96,6 +121,10 @@ border-radius: 20px;
 }
 .date-place{
   margin-top: 5px;
+}
+.update-button{
+  padding-top: 15px;
+
 }
 
 

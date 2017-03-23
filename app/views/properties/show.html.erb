@@ -5,25 +5,39 @@
   </div>
 
 <div class="row">
-    <div class="cl-sm-6">
-         <% if @properties.pic.present? %>
-            <%= image_tag @properties.pic  , class: "picture"  %>
-         <% end %>
+    <div class="cl-sm-8">
+        <div class="col-sm-6">
+
+           <div class="row">
+             <% if @properties.pic.present? %>
+                <%= image_tag @properties.pic  , class: "picture"  %>
+             <% end %>
+           </div>
+
+           <div class="row">
+            <div class="col-sm-10">
+             <% if @properties.info.present? %>
+                <%= text_area_tag 'description', @properties.info,  size: "92x6", disabled: true %>
+             <% end %>
+            </div>
+           </div>
+
+         </div>
     </div>
 
     <div class="cl-sm-4 sideheading">
 
         <div class="row">
           <% if @properties.price %>
-            <%= @properties.price %>
+            <%= @properties.price %>&nbsp;per day
           <% end %>
         </div>
 
         <div class="row form-group date-place">
-          From: <input type="text" placeholder="dd/mm/yy" id="datepicker-1" class="form-control">
+          From: <input type="text" placeholder="mm/dd/yyyy" id="from-datepicker" class="form-control">
         </div>
         <div class="row form-group date-place">
-          To: <input type="text" placeholder="dd/mm/yy" id="datepicker-2" class="form-control">
+          To: <input type="text" placeholder="mm/dd/yyyy" id="to-datepicker" class="form-control">
         </div>
 
         <div class="row">
@@ -63,7 +77,7 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
-    $('#datepicker-1').datepicker();
-    $('#datepicker-2').datepicker();
+    $('#from-datepicker').datepicker();
+    $('#to-datepicker').datepicker();
   });
 </script>

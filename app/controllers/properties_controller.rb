@@ -10,9 +10,9 @@ class PropertiesController < ApplicationController
               "Studios", "Vehicles"]
 
     if params[:category].blank?
-      @properties = Property.all
+      @properties = Property.order("id ASC").all
     else
-      @properties = Property.all.where(category:params["category"])
+      @properties = Property.where(category:params["category"]).order("id ASC").all
     end
 
   end
