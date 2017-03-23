@@ -1,0 +1,69 @@
+<div class="container">
+<div class="container showpage" >
+  <div class="panel panel-default">
+    <div class="panel-heading"><h2><%= @properties.name %></h2></div>
+  </div>
+
+<div class="row">
+    <div class="cl-sm-6">
+         <% if @properties.pic.present? %>
+            <%= image_tag @properties.pic  , class: "picture"  %>
+         <% end %>
+    </div>
+
+    <div class="cl-sm-4 sideheading">
+
+        <div class="row">
+          <% if @properties.price %>
+            <%= @properties.price %>
+          <% end %>
+        </div>
+
+        <div class="row form-group date-place">
+          From: <input type="text" placeholder="dd/mm/yy" id="datepicker-1" class="form-control">
+        </div>
+        <div class="row form-group date-place">
+          To: <input type="text" placeholder="dd/mm/yy" id="datepicker-2" class="form-control">
+        </div>
+
+        <div class="row">
+         <button type="button" class="btn btn-primary btn-block">Request Booking</button>
+        </div>
+
+        <div class="row form-inline ">
+            <% if @properties[:pic].blank? %>
+              <div class="col-sm-6 mugshot">
+                  <%= image_tag "https://www.barfoot.co.nz/images/noprofile-big.png", class: "mugshot" %>
+              </div>
+              <% else %>
+              <div class="col-sm-6 mugshot">
+                  <%= image_tag "https://www.barfoot.co.nz/images/noprofile-big.png", class: "mugshot" %>
+              </div>
+            <% end %>
+
+            <div class="col-sm-6 nameplace">
+                John Doe
+              <div>
+                <button type="button" class="btn btn-primary form-control button-place ">Contact</button>
+              </div>
+            </div>
+
+        </div>
+
+      <div class="row pic_placement">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.6476609170627!2d-0.09110564875278862!3d51.51967977953724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cabe5517883%3A0xcdad2ecccc500599!2sRopemaker+St%2C+London+EC2Y!5e0!3m2!1sen!2suk!4v1490258171937" width="300" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+
+  </div>
+</div>
+</div>
+<div class="container">
+
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#datepicker-1').datepicker();
+    $('#datepicker-2').datepicker();
+  });
+</script>

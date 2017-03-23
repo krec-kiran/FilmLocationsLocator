@@ -1,88 +1,101 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
- @import "bootstrap";
  @import "font-awesome";
+ @import "bootstrap";
 
- .center{
+.center{
   text-align: center;
  }
 
- a {
-  color: black;
+/* to make hyperlinks black! */
+
+
+a.deco-none {
+    color: inherit;
+    text-decoration:none;
+    font-weight: 500;
+}
+
+.title-style{
+  color: inherit;
+  font-weight: 400;
 }
 
 /* side panel styling */
 
  .single {
-padding: 20px 15px;
-margin-top: 40px;
+padding: 20px 30px;
+margin-top: 2px;
 background: #fcfcfc;
 border: 1px solid #f0f0f0;
 border-radius: 20px;
 }
-.single h3.side-title {
-margin: 0;
-margin-bottom: 10px;
-font-size: 20px;
-color: #333;
-text-transform: uppercase;
-text-align: center;}
-.single h3.side-title:after {
-content: '';
-width: 40px;
-height: 1px;
-background: #ff173c;
-display: block;
-margin-top: 6px; }
 
-.single ul {
-margin-bottom: 0; }
-.single li a {
-color: #666;
-font-size: 14px;
-text-transform: uppercase;
-border-bottom: 1px solid #f0f0f0;
-line-height: 40px;
-display: block;
-text-decoration: none; }
-.single li a:hover {
-color: #ff173c; }
-.single li:last-child a {
-border-bottom: 0; }
-
-.detail{
-  margin-top: 1cm;
-}
-
-/* image rows styling */
+/* row image styling */
 
 .play {
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   margin-bottom: 40px;
   border-radius: 35px;
 
 }
+/* marker line style */
 
 .marker {
     border: none;
     height: 1px;
-    /* Set the hr color */
-    color: #333; /* old IE */
     background-color: #333; /* Modern Browsers */
+}
+
+.picture{
+  padding: 20px;
+  margin-top: 2px;
+  height: 600px;
+  width: 800px;
+  margin-bottom: 40px;
+
+}
+
+.mugshot{
+  margin-top: 10px;
+  margin-bottom:20px;
+  height: 150px;
+  width: 150px;
+  margin-left:-8px;
+  border-radius: 20px;
+
+}
+
+.nameplace{
+ margin-top:50px;
+ text-align: center;
+ padding-left: 260px;
+
+}
+
+.button-place{
+ margin-top:10px;
+}
+
+.showpage{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.sideheading{
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  text-align: center;
+}
+
+.pic_placement{
+  margin-top: 20px;
+
+}
+.date-place{
+  margin-top: 5px;
 }
 
 

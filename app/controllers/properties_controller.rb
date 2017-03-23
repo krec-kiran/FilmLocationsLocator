@@ -1,8 +1,10 @@
 class PropertiesController < ApplicationController
+
   def index
 
-    @properties = Property.paginate(page: params[:page], per_page: 10)
+    # @properties = Property.paginate(page: params[:page], per_page: 10)
 
+    @commercial_properties = ["Cafes & Restaurants", "Dance Studios", "Hotels" ]
 
     @props = ["Commercial", "External", "Industrial","Public Buildings", "Residential", "Sports facilities",
               "Studios", "Vehicles"]
@@ -13,9 +15,10 @@ class PropertiesController < ApplicationController
       @properties = Property.all.where(category:params["category"])
     end
 
-        # @props = @properties.order(:name).page params[:page]
-
-
-
   end
+
+  def show
+    @properties = Property.find(params[:id])
+  end
+
 end
