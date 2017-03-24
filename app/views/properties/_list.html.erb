@@ -1,13 +1,15 @@
 <!-- * code for List view -->
 
-<div class="col-sm-9">
+<div class="col-sm-8">
     <% @properties.each do |property| %>
       <% if property[:pic].blank? %>
-          <div class="col-sm-3 list-group">
+        <div class="row">
+          <a href="<%=property_path(property) %>">
             <%= image_tag "http://placehold.it/600x400", class: "play" %>
           </div>
         <% else %>
-          <div class="col-sm-3 list-group">
+          <div class="row">
+          <a href="<%=property_path(property) %>">
             <%= image_tag property.pic, class: "play" %>
           </div>
         <% end %>

@@ -5,20 +5,21 @@
           <hr class="marker">
       </div>
 
-        <a href="?view=grid" class="btn btn-primary btn-md">
-          <span class="glyphicon glyphicon-th-large"></span> Grid
-        </a>
-        <a href="?view=list" class="btn btn-primary btn-md">
-          <span class="glyphicon glyphicon-th-list"></span> List
-        </a>
+        <div class="row" >
+        <div class="col-md-12">
+          <a href="?view=list" class="glypicon-pos btn btn-primary btn-md pull-right">
+            <span class="glyphicon glyphicon-th-list"></span> List
+          </a>
+          <a href="?view=grid" class="glypicon-pos btn btn-primary btn-md pull-right">
+            <span class="glyphicon glyphicon-th-large"></span> Grid
+          </a>
+        </div>
+       </div>
 
-             <%= render 'sidepanel' %>
-
+            <%= render 'sidepanel' %>
             <% if params[:view]=="list" %>
               <%= render 'list', properties: @properties %>
             <% else %>
               <%= render 'grid', properties: @properties %>
             <% end %>
-
-
 </div>
