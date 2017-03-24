@@ -5,22 +5,77 @@
   </div>
 
 <div class="row">
-    <div class="cl-sm-8">
-        <div class="col-sm-6">
-
-           <div class="row">
+    <div class="col-sm-8">
+        <div class="col-sm-12">
+           <!-- <div class="row">
              <% if @properties.pic.present? %>
                 <%= image_tag @properties.pic  , class: "picture"  %>
              <% end %>
-           </div>
+           </div> -->
 
-           <div class="row">
-            <div class="col-sm-10">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<!-- Light box implementation -->
+
+            <div class="row">
+               <div class="mySlides">
+                  <img src="http://antonyz.com/wp-content/uploads/2014/11/London-England-Tower-Bridge-Night-car-Lights.jpg" style="width:100%", class="play-show">
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext"></div>
+                  <img src="http://www.thetimes.co.uk/travel/s3/growthtravel-prod/uploads/2016/04/Rome-on-a-budget.jpg" style="width:100%", class="play-show">
+                </div>
+
+                <div class="mySlides">
+                  <div class="numbertext"></div>
+                  <img src="http://www.zapphyre.com/wp-content/uploads/2016/03/Berlin2.jpg" style="width:100%", class="play-show" >
+                </div>
+
+              <div class="mySlides">
+                <div class="numbertext"></div>
+                <img src="https://i.blogs.es/ff4749/berlin/original.jpg" style="width:100%", class="play-show">
+              </div>
+
+              <div class="mySlides">
+                  <div class="numbertext"></div>
+                  <img src="http://www.zapphyre.com/wp-content/uploads/2016/03/Berlin2.jpg" style="width:100%", class="play-show" >
+                </div>
+
+              <div class="mySlides">
+                <div class="numbertext"></div>
+                <img src="https://i.blogs.es/ff4749/berlin/original.jpg" style="width:100%", class="play-show">
+              </div>
+
+            </div>
+
+              <div class="row">
+                      <div class="column">
+                        <img class="demo" src="http://antonyz.com/wp-content/uploads/2014/11/London-England-Tower-Bridge-Night-car-Lights.jpg" style="width:100%" onclick="currentSlide(1)" >
+                      </div>
+
+                      <div class="column">
+                        <img class="demo" src="http://www.thetimes.co.uk/travel/s3/growthtravel-prod/uploads/2016/04/Rome-on-a-budget.jpg" style="width:100%" onclick="currentSlide(2)" >
+                      </div>
+
+                      <div class="column">
+                        <img class="demo" src="http://www.zapphyre.com/wp-content/uploads/2016/03/Berlin2.jpg" style="width:100%" onclick="currentSlide(3)" >
+                      </div>
+
+                      <div class="column">
+                        <img class="demo" src="https://i.blogs.es/ff4749/berlin/original.jpg" style="width:100%" onclick="currentSlide(4)">
+                      </div>
+              </div>
+
+
+<!--  Light box implementation end -->
+
+           <div class="row text-area">
              <% if @properties.info.present? %>
-                <%= text_area_tag 'description', @properties.info,  size: "92x6", disabled: true %>
+                <%= text_area_tag 'description', @properties.info,  size: "100x8", disabled: true %>
              <% end %>
             </div>
-           </div>
 
          </div>
     </div>
@@ -80,4 +135,44 @@
     $('#from-datepicker').datepicker();
     $('#to-datepicker').datepicker();
   });
+</script>
+
+
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
 </script>

@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  resources :properties , except: [:show]
-
+  resources :properties
   root to: 'properties#index'
-  get 'properties/:id', to:'properties#show'
+  # get 'lightbox', to:'properties#lightbox'
 
   resources :blogs
 end
