@@ -1,6 +1,10 @@
 <!-- * code for List view -->
 
 <div class="col-sm-8">
+       <!--  <% if params[:category] %>
+            <% @myproperties = Property.where(category:params["category"]).order("id ASC").all %>
+        <% end %> -->
+
     <% @properties.each do |property| %>
       <% if property[:pic].blank? %>
         <div class="row">

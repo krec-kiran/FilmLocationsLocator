@@ -9,6 +9,7 @@ class PropertiesController < ApplicationController
     @props = ["Commercial", "External", "Industrial","Public Buildings", "Residential", "Sports facilities",
               "Studios", "Vehicles"]
 
+
     if params[:category].blank?
       @properties = Property.order("id ASC").all
     else
