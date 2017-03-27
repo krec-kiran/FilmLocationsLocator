@@ -23,6 +23,4 @@ test:
 production:
   <<: *default
   database: location_production
-  username: Portfolio
-  password: <%= ENV['LOCATION_DATABASE_PASSWORD'] %>
 
