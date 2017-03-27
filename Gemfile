@@ -82,6 +82,9 @@ gem 'lograge', '~> 0.4.1'
 
 gem "awesome_print", require:"ap"
 
+group :production do
+  gem 'rails_12factor'
+end
 
 
 
