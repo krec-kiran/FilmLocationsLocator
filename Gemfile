@@ -59,8 +59,6 @@ group :development do
   gem "better_errors"
   gem "binding_of_caller"
 
-
-
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -81,6 +79,9 @@ gem 'sidekiq'
 gem 'lograge', '~> 0.4.1'
 
 gem "awesome_print", require:"ap"
+
+gem 'mail_form'
+
 
 group :production do
   gem 'pg', '~> 0.18'

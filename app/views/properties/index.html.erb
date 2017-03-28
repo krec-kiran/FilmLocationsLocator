@@ -1,9 +1,16 @@
-<div class="jumbotron">
+<div class="jumbotron ">
       <div class="center">
           <h1 class="display-3">Location Finder</h1>
           <p class="lead">Digital Platform to find shooting locations in London</p>
           <hr class="marker">
       </div>
+
+     <% if notice %>
+        <div class="alert alert-success alert-dismissable">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <%= notice%>
+        </div>
+      <% end %>
 
         <div class="row" >
         <div class="col-md-12">
@@ -16,6 +23,8 @@
         </div>
        </div>
 
+
+
             <%= render 'sidepanel' %>
             <% if params[:view]=="list" %>
               <%= render 'list', properties: @properties %>
@@ -23,3 +32,4 @@
               <%= render 'grid', properties: @properties %>
             <% end %>
 </div>
+

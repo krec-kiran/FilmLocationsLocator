@@ -1,5 +1,5 @@
- @import "font-awesome";
- @import "bootstrap";
+@import "font-awesome";
+@import "bootstrap";
 
 .center{
   text-align: center;
@@ -50,6 +50,25 @@ border-radius: 20px;
 
 
 }
+
+
+h2{
+  position: relative;
+  left:150px;
+  bottom:10px;
+}
+
+.messages{
+  position: relative;
+  left:500px;
+}
+
+.placement{
+  position: relative;
+  left:300px;
+  top: 100px;
+}
+
 /* marker line style */
 
 .marker {
@@ -281,4 +300,39 @@ img.hover-shadow {
   margin-top: 5px;
   margin-right: 5px;
 }
+
+/* contact form stylings*/
+
+.hidden { display: none; }
+
+/*flash*/
+
+.alert-error {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: left;
+}
+
+.alert-alert {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+text-align: left;
+}
+
+.alert-success {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: left;
+}
+
+.alert-notice {
+background-color: #dff0d8;
+border-color: #d6e9c6;
+color: #468847;
+text-align: left;
+}
+
 
